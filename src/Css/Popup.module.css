@@ -1,0 +1,99 @@
+/* Estilos para o popup */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Garante que o popup fique no topo */
+}
+
+.popupContainer {
+  background-color: white;
+  padding: 1.25rem; /* 20px */
+  width: 60%;
+  max-width: 30rem; /* 480px */
+  height: auto;
+  max-height: 70vh;
+  position: relative;
+  border-radius: 0.5rem; /* 8px */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+.popupClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.125rem; /* 18px */
+  cursor: pointer;
+}
+
+.popupSave {
+  padding: 0.625rem 1.25rem; /* 10px 20px */
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: auto;
+  margin-bottom: 1.25rem; /* 20px */
+  border-radius: 0.25rem; /* 4px */
+  transition: background-color 0.3s ease;
+}
+
+.popupSave:hover {
+  background-color: darkgreen;
+}
+
+/* Seções compartilhadas para Empresa e Categoria */
+.empresaSection,
+.categoriaSection {
+  margin-top: 1.25rem; /* 20px */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.empresaInfo,
+.empresaNota,
+.categoriaSection input {
+  width: 48%;
+}
+
+.empresaInfo input,
+.empresaNota input,
+.categoriaSection input {
+  width: 100%;
+  padding: 0.5rem; /* 8px */
+  border: 1px solid #ccc;
+  border-radius: 0.25rem; /* 4px */
+}
+
+.descricaoSection {
+  margin-top: 1.25rem; /* 20px */
+}
+
+.textareaDescricao {
+  width: 100%;
+  height: 6.25rem; /* 100px */
+  padding: 0.5rem; /* 8px */
+  border: 1px solid #ccc;
+  border-radius: 0.25rem; /* 4px */
+}
+
+/* Adicional para responsividade */
+@media (max-width: 768px) {
+  .popupContainer {
+    width: 90%; /* Aumenta a largura em dispositivos menores */
+  }
+}

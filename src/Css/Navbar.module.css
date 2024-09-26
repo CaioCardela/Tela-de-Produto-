@@ -1,0 +1,93 @@
+/* Estilos da NavBar */
+.barraNavegacao {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #333;
+  padding: 15px;
+  position: relative;
+}
+
+.logo h1 {
+  color: white;
+  font-size: 24px;
+}
+
+.barraPesquisa input {
+  width: 300px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Links de navegação em modo desktop */
+.linksNavegacao {
+  list-style: none;
+  display: flex;
+}
+
+.linksNavegacao li {
+  margin-left: 20px;
+}
+
+.linksNavegacao a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.linksNavegacao a:hover {
+  background-color: #45a049;
+  border-radius: 5px;
+}
+
+/* Menu Hamburguer */
+.hamburguer {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburguerLinha {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .barraPesquisa {
+    display: none;
+  }
+
+  .linksNavegacao {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+
+  .linksAtivo {
+    height: 150px; /* Define a altura quando o menu está ativo */
+  }
+
+  .linksNavegacao li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .hamburguer {
+    display: flex; /* Exibir o menu hamburguer em dispositivos menores */
+  }
+}
