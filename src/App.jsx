@@ -2,7 +2,9 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import ListProducts from './Components/ListProducts';  // Importando o componente de listar produtos
 import EditProduct from './Components/EditProduct';    // Importando o componente de editar produto
 import ProductForm from './Components/ProductForm';    // Importando o componente de adicionar produto
-import Navbar from './Components/Navbar';              // Importando o Navbar
+import Navbar from './Components/Navbar';
+import Login from './Components/Login';
+import Cadastro from './Components/Cadastro';              // Importando o Navbar
 
 function App() {
   return (
@@ -16,7 +18,8 @@ function App() {
 
         {/* Rota para listar produtos */}
         <Route path="/listar-produtos" element={<ListProducts />} />
-
+        <Route path="/login" element={<Login />} />
+        <Route path="/cadastro" element={<Cadastro />} />
         {/* Rota para adicionar novo produto */}
         <Route path='/adicionar-produto' element={<ProductForm />} />
 
